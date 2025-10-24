@@ -12,26 +12,26 @@ dependencies {
     implementation 'folk.sisby:kaleido-config:0.3.1+1.3.1'
 }
 
-publishing {
-    publications {
-        mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
-            from components.java
-        }
-    }
+// publishing {
+//     publications {
+//         mavenCommon(MavenPublication) {
+//             artifactId = rootProject.archives_base_name
+//             from components.java
+//         }
+//     }
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        maven {
-            url "https://sg.storage.bunnycdn.com/skyeven"
-            credentials(HttpHeaderCredentials) {
-                name = "AccessKey"
-                value = property("skyevenToken")
-            }
-            authentication {
-                header(HttpHeaderAuthentication)
-            }
-        }
-    }
-}
+//     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+//     repositories {
+//         // Add repositories to publish to here.
+//         maven {
+//             url "https://sg.storage.bunnycdn.com/skyeven"
+//             credentials(HttpHeaderCredentials) {
+//                 name = "AccessKey"
+//                 value = property("skyevenToken")
+//             }
+//             authentication {
+//                 header(HttpHeaderAuthentication)
+//             }
+//         }
+//     }
+// }
