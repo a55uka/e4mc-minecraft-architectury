@@ -21,6 +21,9 @@ jobs:
           java-version: 21
           check-latest: true
 
+      - name: Change permission of Gradlew exec
+        run: chmod +x ./gradlew
+
       - name: Build using Gradle
         run: ./gradlew build
 
